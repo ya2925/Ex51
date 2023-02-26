@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     TextView R1_TV1,R1_TV2,R2_TV1,R2_TV2,R3_TV1,R3_TV2;
     EditText R1_ET,R2_ET,R3_ET;
     ImageView R1_IV,R2_IV,R3_IV;
-    Button R1_BTN,R2_BTN,R3_BTN;
+    Button R1_BTN,R2_BTN,R3_BTN,resBTN;
     Random rnd;
     int column = 1;
 
@@ -45,13 +45,14 @@ public class MainActivity extends AppCompatActivity {
         R2_BTN = (Button) findViewById(R.id.R2_BTN);
         R3_BTN = (Button) findViewById(R.id.R3_BTN);
 
-
+        resBTN = (Button) findViewById(R.id.reastartBtn);
         R1_BTN.setVisibility(View.INVISIBLE);
         R2_BTN.setVisibility(View.INVISIBLE);
         R3_BTN.setVisibility(View.INVISIBLE);
 
 
         rnd = new Random();
+        resBTN.performClick();
     }
 
 
@@ -97,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void goodOrBadClick(Button btn,ImageView iv,boolean isGood){
         if(isGood){
-            iv.setImageResource(R.drawable.viimg);
+            iv.setImageResource(R.drawable.thevi);
             column++;
         }else{
             iv.setImageResource(R.drawable.xx);
